@@ -1,0 +1,40 @@
+<ng-container *ngIf="launchDetails$ | async as launchDetails">
+    <section class="container">
+        <mat-card>
+            <div class="mission-patch-image">
+                <img
+                mat-card-image
+                [src]="launchDetails.links.mission_patch_small"
+                alt="Mission patch of {{ launchDetails.mission_name }}"
+                />
+            </div>
+            <mat-card-header>
+                <mat-card-title>{{ launchDetails.mission_name }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>{{ launchDetails.details }}</p>
+            </mat-card-content>
+        </mat-card>
+    </section>
+    <!-- <p>youtube.com/embed/{{ launchDetails.links.video_link.substr(17) }}</p> -->
+    <!-- <div class="mission-video">
+        <iframe 
+            width="600" 
+            height="300" 
+            src="youtube.com/embed/{{ launchDetails.links.video_link.substr(17) }}"
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div> -->
+    <section class="photo-grid">
+        <div class="details-image-container" *ngFor="let pic of launchDetails.links.flickr_images">
+            <img
+            [src]="pic"
+            alt="Picture of {{ launchDetails.mission_name }}"
+            loading="lazy"       
+            />
+        </div>
+    </section>
+
+</ng-container>

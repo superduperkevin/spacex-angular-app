@@ -1,0 +1,32 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(autofill, min-content);
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+
+mat-card {
+    cursor: pointer;
+}
+
+mat-card:hover {
+    background-color: rgba(169,169,169,0.4);
+}
+
+mat-card-header {
+    border-bottom: 1px solid;
+}
+
+.container-image {
+    width: 20rem;
+    height: 20rem;
+    padding: 1rem;
+    margin: auto;
+}
+
+.container-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

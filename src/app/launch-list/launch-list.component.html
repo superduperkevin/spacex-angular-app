@@ -1,23 +1,26 @@
 <ng-container *ngIf="pastLaunches$ | async as pastLaunches">
     <main>
+        <h1>SpaceX Recent Missions</h1>
         <section class="container">
             <mat-card *ngFor="let launch of pastLaunches" [routerLink]="['/', launch.id]" >
-                <mat-card-header>
+                <div class="header">
+                    <div class="container-icon">
                         <img 
-                        width="50" 
-                        height="50"
-                        mat-card-avatar
                         loading="lazy"
                         [src]="launch.links.mission_patch_small"
                         alt="Mission patch of {{ launch.mission_name }}"
                         />
-                    <mat-card-title>
-                        {{ launch.mission_name }}
-                    </mat-card-title>
-                    <mat-card-subtitle>
-                        {{ launch.rocket.rocket_name }}
-                    </mat-card-subtitle>
-                </mat-card-header>
+                    </div>
+                    <div class="title-text">
+                        <mat-card-title>
+                            {{ launch.mission_name }}
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            <b>{{ launch.rocket.rocket_name }} •</b> launched {{ launch.launch_date_utc | relativeTime }}
+                        </mat-card-subtitle>
+                    </div>
+                    
+                </div>
                 <div class="container-image">
                     <img 
                         loading="lazy"

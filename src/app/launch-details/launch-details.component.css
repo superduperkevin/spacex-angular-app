@@ -1,5 +1,5 @@
 .main {
-    background: url(/assets/images/space2.jpg) no-repeat center center fixed;
+    background: url(/assets/images/bg.jpg) no-repeat center center fixed;
     min-height: 100%;
     min-width: 100%;
     background-size: cover;
@@ -71,6 +71,7 @@ mat-card-content {
     object-fit: contain;
     border: 3px solid white;
     border-style: inset;
+    background-color: black;
 }
 
 @media screen and (max-width: 1100px) {

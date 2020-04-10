@@ -1,5 +1,7 @@
 # SpacexApp
 
+This project is hosted at (https://spacex-app.fb57c.web.app) using Angular Firebase.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
 
 ## Development server

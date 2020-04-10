@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "spacex-app-fb57c": {
+      "hosting": {
+        "spacex-app": [
+          "spacex-app-fb57c"
+        ]
+      }
+    }
+  }
+}

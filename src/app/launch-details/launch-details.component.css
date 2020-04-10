@@ -1,16 +1,46 @@
+.main {
+    background: url(/assets/images/bg.jpg) no-repeat center center fixed;
+    min-height: 100%;
+    min-width: 100%;
+    background-size: cover;
+      
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+      
+    /* Set up positioning */
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+}
+
 .container {
-    padding-top: 1rem;
+    padding-top: 2rem;
 }
 
 mat-card {
-    width: 50%;
+    padding-top: 1rem;
+    background-color: #f5f5f5;
+    width: 80%;
     margin: auto;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+mat-card-title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+mat-card-content {
+    padding-left: 1rem;
 }
 
 .mission-patch-image {
-    width: 15rem;
-    height: 15rem;
-    padding: 1rem;
+    width: 10rem;
+    height: auto;
+    /* padding: 1rem; */
 }
 
 .mission-patch-image img {
@@ -19,24 +49,17 @@ mat-card {
     object-fit: contain;
 }
 
-mat-card img {
-    object-fit: contain;
-}
-
-mat-card-header {
-    justify-content: center;
-}
-
 
 .photo-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 1rem;
+    margin-top: 2rem;
     grid: 1px solid;
 }
 
 .details-image-container {
-    width: 20rem;
+    width: auto;
     height: 20rem;
     padding: 1rem;
     margin: auto;
@@ -46,4 +69,73 @@ mat-card-header {
     height: 100%;
     width: 100%;
     object-fit: contain;
+    border: 3px solid white;
+    border-style: inset;
+    background-color: black;
+}
+
+@media screen and (max-width: 1100px) {
+    .mission-patch-image {
+        width: 8rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .photo-grid {
+        margin-top: 1rem;
+    }
+
+    .details-image-container {
+        height: 15rem;
+    }
+}
+
+
+@media screen and (max-width:700px) {
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .details-image-container img {
+        border: 2px solid white;
+        border-style: inset;
+    }
+
+    .mission-patch-image {
+        width: 7rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mission-patch-image {
+        width: 6rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    mat-card-title {
+        font-size: 1.2rem;
+    }
+
+    mat-card-content {
+        font-size: 0.8rem;
+    }
+
+    .mission-patch-image {
+        width: 5rem;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .mission-patch-image {
+        width: 4rem;
+    }
 }

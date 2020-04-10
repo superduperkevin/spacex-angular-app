@@ -1,28 +1,34 @@
 main {
-    background: url("/assets/images/space.jpg") no-repeat fixed;
+    background: url("/assets/images/space2.jpg") no-repeat fixed;
 }
 
 
 main h1 {    
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
     color: white;
+    font-size: 3rem;
 }
 
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(autofill, min-content);
     grid-gap: 1rem;
     padding: 1rem;
 }
 
 mat-card {
     cursor: pointer;
+    background-color: #f5f5f5;
 }
 
 mat-card:hover {
-    background-color: rgba(224, 222, 222, 0.8);
+    background-color: rgba(245, 245, 245, 0.8);
+}
+
+mat-card-title {
+    line-height: 1.3;
 }
 
 .header {
@@ -32,6 +38,7 @@ mat-card:hover {
 
 .title-text {
     display: block;
+    margin-left: 1rem;
 }
 
 .container-icon {
@@ -47,9 +54,9 @@ mat-card:hover {
 }
 
 .container-image {
-    width: 20rem;
+    width: auto;
     height: 20rem;
-    padding: 1rem;
+    padding-top: 1rem;
     margin: auto;
 }
 
@@ -57,4 +64,43 @@ mat-card:hover {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+
+@media screen and (max-width: 900px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+        padding: 1rem;
+    }
+
+    .container-image {
+        height: 15rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container-image {
+        height: 10rem;
+    }
+
+    mat-card-title {
+        font-size: 1.5rem;
+    }
+
+    mat-card-subtitle {
+        font-size: 0.8rem;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);  
+    }
 }

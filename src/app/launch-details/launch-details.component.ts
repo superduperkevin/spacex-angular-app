@@ -25,16 +25,6 @@ export class LaunchDetailsComponent implements OnInit {
     map(res => res.data.launch),
   );
 
-
-  videoUrl() {
-    return this.launchDetails$
-  }
-
-
-
-
-
-
   ngOnInit(): void {
   }
 
